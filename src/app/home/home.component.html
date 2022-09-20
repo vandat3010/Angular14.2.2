@@ -1,19 +1,21 @@
 <div class="test">
-    <h3>Đây là component Home</h3>
-    <h1>Trái cây</h1>
-    <br/>
-    <table class="table">
-        <tr>
-            <th>STT</th>
-            <th>Tên</th>
-            <th>Giá</th>
-        </tr>
-        <tr *ngFor="let trai of traiCay2; let i = index">
-            <td>{{i + 1}}</td>
-            <td>{{ trai.ten }}</td>
-            <td class="right">
-                <span [ngClass]="{'so-am':trai.gia < 0 }">{{ trai.gia }}</span>
-            </td>
-        </tr>
-    </table>
+  <h3>Đây là component Home</h3>
+  <h1>Trái cây</h1>
+  <br />
+  <table class="table">
+    <tr>
+      <th>STT</th>
+      <th>Tên</th>
+      <th>Giá</th>
+      <th>Flash Sale</th>
+    </tr>
+    <tr *ngFor="let trai of traiCay2; let i = index">
+      <td>{{i + 1}}</td>
+      <td>{{ trai.ten }}</td>
+      <td class="right">
+        <span [ngClass]="{'so-am':trai.gia < 0 }">{{ trai.gia | currency: 'EUR':'symbol':'1.2-2'}}</span>
+      </td>
+      <td>{{ trai.FlashSale | onSale | uppercase}}</td>
+    </tr>
+  </table>
 </div>
