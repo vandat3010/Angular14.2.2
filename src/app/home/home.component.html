@@ -2,7 +2,7 @@
   <h3>Đây là component Home</h3>
   <h1>Trái cây</h1>
   <br />
-  <table class="table">
+  <!-- <table class="table">
     <tr>
       <th>STT</th>
       <th>Tên</th>
@@ -17,5 +17,15 @@
       </td>
       <td>{{ trai.FlashSale | onSale | uppercase}}</td>
     </tr>
-  </table>
+  </table> -->
+  <select name="calc_shipping_provinces" required="" (change)="changeCity($event)">
+    <option value="">Tỉnh / Thành phố</option>
+    <option *ngFor="let item of cities" value="{{ item.city }}">
+        {{ item.city }}
+    </option>
+  </select>
+  <select name="calc_shipping_district" required="">
+    <option value="">Quận / Huyện</option>
+    <option *ngFor="let item of districts" value="{{ item }}">{{ item }}</option>
+  </select>
 </div>
