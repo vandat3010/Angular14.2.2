@@ -1,18 +1,25 @@
-.test{
+.test {
     border: 1px solid;
     padding: 10px;
     box-shadow: 5px 10px red;
-}
-.table, th, td{
+    width: 600px;
+  }
+  .table,
+  td,
+  th {
     border-collapse: collapse;
     border: 1px solid black;
-}
-td, th{
+  }
+  
+  td,
+  th {
     min-width: 100px;
-}
-.so-am{
-    color: red;
-}
-.right{
+  }
+  
+  .right {
     text-align: right;
-}
+  }
+  
+  .so-am {
+    color: red;
+  }
